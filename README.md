@@ -1,0 +1,2 @@
+# SetError
+Func _PrefixNeg($vNumber)     If IsNumber($vNumber) Then ; $vNumber is numeric         If $vNumber > 0 Then              Return $vNumber * -1 ; $vNumber is > 0         Else               Return $vNumber ; $vNumber is already negative, return unchanged         EndIf     ElseIf IsString($vNumber) Then ; $vNumber is a string         Return "-" &amp; $vNumber ; Prefix $vNUmber with "-"     Else Return SetError(1, 0, 0) ; Neither string nor number, return error EndFunc   ;==>_PrefixNeg
